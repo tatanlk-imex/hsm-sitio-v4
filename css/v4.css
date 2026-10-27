@@ -1,0 +1,83 @@
+/* HSM Chile V4: línea gráfica de www.hsm.cl (Roboto Flex, rojo #c20e1a, segundo menú oscuro, banners, líneas, iconos, pie rojo) sobre la diagramación y las mejoras de la versión 1. */
+:root{--fuente:"Roboto Flex","Segoe UI",Roboto,Arial,sans-serif;--rojo:#c20e1a;--rojo-osc:#88020b}
+body{font-family:var(--fuente)}
+h1,h2,h3,h4,.btn,.chip,summary{font-family:var(--fuente)}
+/* franja de la ley: sobria, en la paleta original */
+.barra-ley{background:#1d1d1f;color:#fff}
+.barra-ley a{color:#fff}
+.barra-ley .dias{background:var(--rojo);color:#fff}
+/* cabecera como la original */
+.cabecera{box-shadow:none;padding:14px 20px}
+.cabecera .cab-int{max-width:1600px;min-height:0;gap:22px}
+.logo img{height:60px;width:auto}
+.buscador-pill{display:flex;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:25px;padding:4px 6px 4px 16px;min-width:230px}
+.buscador-pill input{background:transparent;border:0;color:#fff;font:inherit;font-size:.9rem;outline:0;width:100%;min-height:34px}
+.buscador-pill input::placeholder{color:rgba(255,255,255,.8)}
+.buscador-pill button{background:transparent;border:0;color:#fff;cursor:pointer;display:flex;padding:6px}
+.nav-principal{margin-left:auto}
+.nav-principal ul{gap:22px}
+.nav-principal a{font-weight:300;font-size:1.02rem;padding:6px 0;border-radius:0;background:transparent!important;position:relative;white-space:nowrap}
+.nav-principal a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:#fff;transition:width .3s}
+.nav-principal a:hover::after,.nav-principal a[aria-current="page"]::after{width:100%}
+.nav-principal .nav-ley{font-weight:600;color:#fff;background:transparent}
+.nav-principal .cta-nav{border:1.5px solid #fff;border-radius:999px;padding:6px 18px;margin-left:4px;color:#fff;background:transparent}
+.nav-principal .cta-nav::after{display:none}
+.nav-principal .cta-nav:hover{background:#fff!important;color:var(--rojo)}
+/* segundo menú oscuro con categorías en mayúsculas */
+.second-menu{background:#222}
+.second-menu ul{list-style:none;margin:0 auto;padding:0;max-width:1600px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 10px}
+.second-menu a{display:inline-block;padding:12px 14px;color:#fff;text-decoration:none;text-transform:uppercase;font-weight:500;font-size:.9rem;letter-spacing:.02em;transition:color .2s}
+.second-menu a:hover{color:#ffb3b8}
+/* carrusel de banners */
+.v4-hero{position:relative;background:#111;overflow:hidden;aspect-ratio:2560/908}
+.v4-slide{position:absolute;inset:0;display:block;opacity:0;transition:opacity .8s ease;pointer-events:none}
+.v4-slide.activa{opacity:1;pointer-events:auto}
+.v4-slide img{width:100%;height:100%;object-fit:cover}
+.v4-flecha{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.85);color:#222;font-size:1.7rem;line-height:1;cursor:pointer;z-index:3}
+.v4-flecha:hover{background:#fff}.v4-flecha.izq{left:14px}.v4-flecha.der{right:14px}
+.v4-puntos{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:8px;z-index:3}
+.v4-puntos button{width:11px;height:11px;border-radius:50%;border:0;background:rgba(255,255,255,.6);padding:0;cursor:pointer}
+.v4-puntos button.activa{background:var(--rojo);transform:scale(1.25)}
+/* introducción (diagramación de V1) */
+.v4-intro{background:#fff;border-bottom:1px solid var(--gris-2)}
+.v4-intro .contenedor{display:grid;grid-template-columns:1.6fr 1fr;gap:30px;align-items:center;padding-top:34px;padding-bottom:34px}
+.v4-intro h1{font-size:clamp(1.5rem,2.8vw,2.1rem);margin:8px 0 8px;color:var(--negro)}
+.v4-intro .lead{margin:0;color:var(--gris-7);font-size:1.05rem}
+.v4-intro .etiqueta{display:inline-block;background:var(--rojo);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.v4-intro .acciones{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+/* líneas como en el original */
+.v4-lineas{padding:44px 20px 30px;text-align:center}
+.v4-lineas h2{text-transform:uppercase;letter-spacing:.08em;font-weight:600;font-size:1.5rem;margin-bottom:26px}
+.v4-lineas-fila{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px}
+.v4-linea{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#000;font-weight:500;font-size:1.1rem;transition:transform .3s}
+.v4-linea img{width:100%;max-width:230px;height:auto;border-radius:10%;margin-bottom:10px;transition:box-shadow .3s}
+.v4-linea:hover{transform:translateY(-4px);color:var(--rojo)}
+.v4-linea:hover img{box-shadow:0 8px 22px rgba(0,0,0,.2)}
+/* iconos «por qué HSM» originales */
+.v4-iconos{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.v4-icono{text-align:center}
+.v4-icono img{width:150px;height:150px;margin:0 auto 10px;object-fit:contain}
+.v4-icono h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.v4-icono p{font-size:.95rem;color:var(--gris-7)}
+/* títulos de sección en mayúsculas como el original */
+.sobretitulo{letter-spacing:.14em}
+.encabezado-seccion h2{font-weight:600}
+/* banda de cotización y contacto en rojo oscuro original */
+.seccion-roja{background:var(--rojo-osc)}
+#cotizar{background:var(--rojo-osc);color:#fff}
+#cotizar .sobretitulo{color:#fff;opacity:.85}
+#cotizar h2,#cotizar p,#cotizar li{color:#fff}
+#cotizar a:not(.btn){color:#fff}
+#cotizar .caja{color:var(--negro)}
+#cotizar .caja label,#cotizar .caja p,#cotizar .caja li{color:var(--negro)}
+.btn{border-radius:8px;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.btn-sec{background:transparent}
+.card-rojo{background:var(--rojo);color:#fff;border-radius:20px}
+/* pie de página rojo como el original */
+.pie{background:var(--rojo);color:#fff;padding:60px 0 30px}
+.pie h3{text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;font-weight:600}
+.pie a{color:#fff}
+.pie .legal{border-top-color:rgba(255,255,255,.3);color:rgba(255,255,255,.85)}
+@media (max-width:1100px){.cabecera .cab-int{flex-wrap:wrap}.buscador-pill{order:3;flex:1 1 100%}.nav-principal{background:var(--rojo-osc)}.nav-principal ul{gap:0}.nav-principal .cta-nav{margin:8px 0 0}}
+@media (max-width:900px){.v4-intro .contenedor{grid-template-columns:1fr}.v4-intro .acciones{justify-content:flex-start}.v4-iconos{grid-template-columns:repeat(2,1fr)}.second-menu a{padding:10px;font-size:.8rem}.v4-flecha{display:none}}
+@media (max-width:520px){.v4-iconos{grid-template-columns:1fr}.v4-hero{aspect-ratio:16/9}}
