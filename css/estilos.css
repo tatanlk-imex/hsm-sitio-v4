@@ -288,3 +288,9 @@ details .resp{padding:0 18px 16px;color:var(--gris-9)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media print{.cabecera,.barra-info,.barra-movil,.pie{display:none}}
+
+/* Corrección: los botones del asistente no se achican y muestran el texto completo */
+.asesor-op{flex:0 0 auto;height:auto;white-space:normal;line-height:1.35;padding:11px 14px}
+.asesor-ctl>*{flex-shrink:0}
+.asesor-ctl{max-height:55%}
+
